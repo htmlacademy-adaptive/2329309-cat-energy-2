@@ -5,6 +5,10 @@
   <meta charset="UTF-8">
   <title>Cat Energy</title>
   <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link rel="icon" href="favicon.ico">
+  <link rel="icon" href="favicons/icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="favicons/apple.png">
+  <link rel="manifest" href="manifest.webmanifest">
   <link rel="stylesheet" href="styles/styles.css">
   <script src="scripts/index.js" defer></script>
 </head>
@@ -36,6 +40,11 @@
     <section class="hero">
       <h1 class="hero__title">Функциональное питание для котов</h1>
       <p class="hero__text">Занялся собой? Займись котом!</p>
+      <picture>
+        <source media="(min-width: 1440px)" width="552" height="499" srcset="images/hero-desktop@1x.png@1x.png 1x, images/hero-desktop@2x.png 2x" type="image/png">
+        <source media="(min-width: 768px)" width="709" height="609" srcset="images/hero-tablet@1x.png 1x, images/hero-tablet@2x.png 2x" type="image/png">
+        <img class="hero__image" width="280" height="270" src="images/hero-mobile@1x.png" srcset="images/hero-mobile@2x.png 2x" alt="Банка корма со вкусом курицы 500 грамм">
+      </picture>
       <a class="hero__button" href="#">Подобрать программу</a>
     </section>
     <section class="programs">
@@ -108,4 +117,5 @@
     </div>
   </footer>
 </body>
+
 </html>
