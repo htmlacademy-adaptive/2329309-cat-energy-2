@@ -1,0 +1,12 @@
+.site-menu {
+  font-family: $secondary-font;
+  font-size: 20px;
+  line-height: 20px;
+  list-style-type: none;
+}
+
+.site-menu__link {
+  color: $secondary-color-text;
+  text-decoration: none;
+  text-transform: uppercase;
+}
