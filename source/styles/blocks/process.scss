@@ -5,3 +5,43 @@
   line-height: 40px;
   font-weight: 400;
 }
+
+.process__item--leaf {
+  &::before {
+    content: "";
+    background-image: url("../../icons/stack.svg#icon-leaf");
+    height: 32px;
+    width: 30px;
+    display: inline-block;
+  }
+}
+
+.process__item--powder {
+  &::before {
+    content: "";
+    background-image: url("../../icons/stack.svg#icon-powder");
+    height: 28px;
+    width: 26px;
+    display: inline-block;
+  }
+}
+
+.process__item--eat {
+  &::before {
+    content: "";
+    background-image: url("../../icons/stack.svg#icon-eat");
+    height: 30px;
+    width: 25px;
+    display: inline-block;
+  }
+}
+
+.process__item--clock {
+  &::before {
+    content: "";
+    background-image: url("../../icons/stack.svg#icon-clock");
+    height: 31px;
+    width: 26px;
+    display: inline-block;
+  }
+}

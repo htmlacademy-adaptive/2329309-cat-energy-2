@@ -13,4 +13,32 @@
   line-height: 16px;
   text-decoration: none;
   text-transform: uppercase;
+
+  &::after {
+    content: "";
+    background-image: url("../../icons/stack.svg#arrow");
+    height: 12px;
+    width: 24px;
+    display: inline-block;
+  }
+}
+
+.programs-card--slim {
+  &::after {
+    content: "";
+    background-image: url("../../icons/stack.svg#cat-slim");
+    height: 50px;
+    width: 36px;
+    display: inline-block;
+  }
+}
+
+.programs-card--pro {
+  &::after {
+    content: "";
+    background-image: url("../../icons/stack.svg#cat-pro");
+    height: 28px;
+    width: 67px;
+    display: inline-block;
+  }
 }

@@ -16,7 +16,11 @@
 <body class="page__body">
   <header class="header">
     <a class="header__logo" href="index.html">
-      <img class="header__logo-image" src="images/logo-mobile.svg" width="33" height="38" alt="Логотип Cat Energy">
+      <picture>
+        <source media="(min-width: 1440px)" width="202" height="59" srcset="images/logo-desktop.svg" type="image/svg+xml">
+        <source media="(min-width: 768px)" width="174" height="50" srcset="images/logo-tablet.svg" type="image/svg+xml">
+        <img class="header__logo-image" width="33" height="38" src="images/logo-mobile.svg" alt="Логотип Cat Energy">
+      </picture>
     </a>
     <nav class="navigation">
       <button class="navigation__toggle" type="button">
@@ -277,17 +281,17 @@
     </a>
     <ul class="footer__list social">
       <li class="social__item">
-        <a class="social__link" href="#">
+        <a class="social__link social__link--vkontakte" href="#">
           <span class="visually-hidden">Вконтакте</span>
         </a>
       </li>
       <li class="social__item">
-        <a class="social__link" href="#">
+        <a class="social__link social__link--youtube" href="#">
           <span class="visually-hidden">Ютуб</span>
         </a>
       </li>
       <li class="social__item">
-        <a class="social__link" href="#">
+        <a class="social__link social__link--telegram" href="#">
           <span class="visually-hidden">Телеграм</span>
         </a>
       </li>

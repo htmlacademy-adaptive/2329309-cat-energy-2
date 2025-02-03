@@ -1,3 +1,14 @@
+.developer {
+  &::after {
+    content: "";
+    mask-image: url("../../icons/stack.svg#logo-html-academy");
+    background-color: #666666;
+    height: 34px;
+    width: 27px;
+    display: inline-block;
+  }
+}
+
 .developer__text {
   font-size: 16px;
   line-height: 20px;

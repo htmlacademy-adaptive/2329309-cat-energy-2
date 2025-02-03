@@ -1,3 +1,13 @@
+.show-more {
+  &::before {
+    content: "";
+    background-image: url("../../icons/stack.svg#plus");
+    height: 30px;
+    width: 30px;
+    display: inline-block;
+  }
+}
+
 .show-more__title {
   font-family: $secondary-font;
   color: #111111;
