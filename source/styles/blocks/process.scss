@@ -6,6 +6,21 @@
   font-weight: 400;
 }
 
+.process__list {
+  list-style-type: none;
+
+  @media (min-width: $tablet) {
+    display: grid;
+    grid-template-columns: 247px 249px;
+    gap: 37px 137px;
+  }
+
+  @media (min-width: $desktop) {
+    grid-template-columns: 230px 246px 248px 250px;
+    gap: 80px;
+  }
+}
+
 .process__item--leaf {
   &::before {
     content: "";

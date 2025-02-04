@@ -1,3 +1,9 @@
+.social {
+  display: flex;
+  gap: 24px;
+  list-style-type: none;
+}
+
 .social__link--vkontakte {
   mask-image: url("../../icons/stack.svg#vkontakte");
   background-color: #666666;
@@ -21,4 +27,3 @@
   width: 28px;
   display: inline-block;
 }
-

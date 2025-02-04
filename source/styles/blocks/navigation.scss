@@ -1,0 +1,5 @@
+.navigation__toggle {
+  @media (min-width: $tablet) {
+    display: none;
+  }
+}

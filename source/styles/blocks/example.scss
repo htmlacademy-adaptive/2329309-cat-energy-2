@@ -1,9 +1,29 @@
+.example {
+  background-color: #eaeaea;
+}
+
 .example__title {
   font-family: $secondary-font;
   color: $secondary-color-text;
   font-size: 36px;
   line-height: 40px;
   font-weight: 400;
+}
+
+.example__wrapper {
+  @media (min-width: $tablet) {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  @media (min-width: $desktop) {
+    display: block;
+  }
+}
+
+.example__list {
+  display: flex;
+  justify-content: space-between;
 }
 
 .example__number {

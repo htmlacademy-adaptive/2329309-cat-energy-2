@@ -1,3 +1,12 @@
+.product-card {
+  display: grid;
+  grid-template-columns: 140px 140px;
+
+  @media (min-width: $tablet) {
+    display: block;
+  }
+}
+
 .product-card__title {
   font-family: $secondary-font;
   color: #222222;
@@ -9,4 +18,8 @@
 .product-card__item {
   font-size: 12px;
   line-height: 16px;
+}
+
+.product-card__button {
+  grid-column: 1 / -1;
 }

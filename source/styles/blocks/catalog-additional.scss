@@ -1,3 +1,10 @@
+.catalog-additional {
+  @media (min-width: $desktop) {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
 .catalog-additional__title {
   font-family: $secondary-font;
   color: $secondary-color-text;
