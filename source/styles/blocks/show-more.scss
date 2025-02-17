@@ -1,20 +1,112 @@
 .show-more {
+  position: relative;
+  padding: 64px 0 25px;
+
   &::before {
     content: "";
-    background-image: url("../../icons/stack.svg#plus");
-    height: 30px;
-    width: 30px;
-    display: inline-block;
+    position: absolute;
+    min-width: 320px;
+    height: 1px;
+    background-color: #ebebeb;
+    top: -2px;
+    left: -20px;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    min-width: 320px;
+    height: 1px;
+    background-color: #ebebeb;
+    bottom: 0;
+    left: -20px;
+  }
+
+  @media (min-width: $tablet) {
+    padding: 160px 37px 40px;
+    border: 1px solid #f2f2f2;
+
+    &::after,
+    &::before {
+      content: none;
+    }
+  }
+
+  @media (min-width: $desktop) {
+    padding: 149px 37px 39px;
   }
 }
 
 .show-more__title {
+  position: relative;
   font-family: $secondary-font;
   color: #111111;
   font-size: 16px;
   line-height: 20px;
   font-weight: 400;
   text-transform: uppercase;
+  padding: 0 38px;
+  margin-bottom: 8px;
+  text-align: center;
+
+  &::before {
+    content: "";
+    position: absolute;
+    background-image: url("../../icons/stack.svg#plus");
+    height: 30px;
+    width: 30px;
+    display: inline-block;
+    top: -53px;
+    left: 125px;
+  }
+
+  @media (min-width: $tablet) {
+    width: 170px;
+    font-size: 20px;
+    line-height: 24px;
+    padding: 0;
+    margin: 0 auto;
+    margin-bottom: 23px;
+
+    &::before {
+      background-image: url("../../icons/stack.svg#plus-tablet");
+      height: 60px;
+      width: 60px;
+      top: -110px;
+      left: 55px;
+    }
+  }
+
+  @media (min-width: $desktop) {
+    margin-bottom: 26px;
+
+    &::before {
+      top: -100px;
+      left: 55px;
+    }
+  }
+}
+
+.show-more__text {
+  font-size: 12px;
+  line-height: 16px;
+  margin: 0;
+  margin-bottom: 21px;
+  padding: 0 30px;
+
+  @media (min-width: $tablet) {
+    width: 170px;
+    font-size: 16px;
+    line-height: 18px;
+    padding: 0;
+    margin: 0 auto;
+    margin-bottom: 82px;
+    text-align: center;
+  }
+
+  @media (min-width: $desktop) {
+    margin-bottom: 90px;
+  }
 }
 
 .show-more__button {
@@ -26,4 +118,21 @@
   text-decoration: none;
   text-transform: uppercase;
   background-color: #f2f2f2;
+  padding: 10px 15px;
+  width: 280px;
+  display: block;
+  box-sizing: border-box;
+
+  &:hover,
+  &:active {
+    background-color: #ebebeb;
+  }
+
+  @media (min-width: $tablet) {
+    width: 250px;
+  }
+
+  @media (min-width: $desktop) {
+    width: 169px;
+  }
 }

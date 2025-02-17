@@ -1,44 +1,190 @@
+.programs-card {
+  position: relative;
+  background-color: #f2f2f2;
+  margin-bottom: 20px;
+  padding: 31px 33px 22px 20px;
+
+  &::before {
+    content: "";
+    background-color: #68b738;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    top: 23px;
+    left: 20px;
+  }
+
+  @media (min-width: $tablet) {
+    padding: 77px 316px 51px 53px;
+    margin-bottom: 30px;
+
+    &::before {
+      width: 200px;
+      height: 200px;
+      top: 92px;
+      left: 445px;
+    }
+  }
+
+  @media (min-width: $desktop) {
+    padding: 77px 61px 55px 52px;
+    margin: 0;
+
+    &::before {
+      width: 100px;
+      height: 100px;
+      top: 47px;
+      left: 52px;
+    }
+  }
+}
+
 .programs-card__title {
   font-family: $secondary-font;
   color: $secondary-color-text;
   font-size: 24px;
   line-height: 37px;
+  font-weight: 400;
   text-transform: uppercase;
+  padding-left: 70px;
+  margin-top: 0;
+  margin-bottom: 29px;
+
+  @media (min-width: $tablet) {
+    font-size: 36px;
+    line-height: 36px;
+    padding: 0;
+    margin-bottom: 24px;
+  }
+
+  @media (min-width: $desktop) {
+    padding-left: 162px;
+    margin-bottom: 73px;
+  }
+}
+
+.programs-card__text {
+  position: relative;
+  margin-bottom: 41px;
+
+  &::after {
+    content: "";
+    position: absolute;
+    width: 240px;
+    height: 1px;
+    background-color: #d9d9d9;
+    bottom: -22px;
+    right: -14px;
+  }
+
+  @media (min-width: $tablet) {
+    margin-bottom: 48px;
+
+    &::after {
+      display: none;
+    }
+  }
+
+  @media (min-width: $desktop) {
+    margin-bottom: 23px;
+  }
 }
 
 .programs-card__button {
+  display: flex;
+  align-items: center;
+  column-gap: 15px;
   font-family: $secondary-font;
   color: $secondary-color-text;
   font-size: 16px;
   line-height: 16px;
+  font-weight: 400;
   text-decoration: none;
   text-transform: uppercase;
 
   &::after {
     content: "";
-    background-image: url("../../icons/stack.svg#arrow");
-    height: 12px;
+    background: url("../../icons/stack.svg#arrow") no-repeat center / cover;
     width: 24px;
-    display: inline-block;
+    height: 12px;
+    flex-shrink: 0;
+  }
+
+  &:hover {
+    &::after {
+      background: url("../../icons/stack.svg#arrow-big") no-repeat center / cover;
+      width: 32px;
+    }
+  }
+
+  &:active {
+    opacity: 0.3;
+
+    &::after {
+      background: url("../../icons/stack.svg#arrow-big") no-repeat center / cover;
+      width: 32px;
+    }
+  }
+
+  @media (min-width: $tablet) {
+    font-size: 20px;
+    line-height: 29px;
+    padding: 5px 0;
+    column-gap: 25px;
   }
 }
 
 .programs-card--slim {
   &::after {
     content: "";
+    position: absolute;
     background-image: url("../../icons/stack.svg#cat-slim");
-    height: 50px;
     width: 36px;
+    height: 50px;
     display: inline-block;
+    top: 20px;
+    left: 27px;
+
+    @media (min-width: $tablet) {
+      width: 140px;
+      height: 194px;
+      top: 80px;
+      left: 475px;
+    }
+
+    @media (min-width: $desktop) {
+      width: 70px;
+      height: 97px;
+      top: 41px;
+      left: 67px;
+    }
   }
 }
 
 .programs-card--pro {
   &::after {
     content: "";
+    position: absolute;
     background-image: url("../../icons/stack.svg#cat-pro");
     height: 28px;
     width: 67px;
     display: inline-block;
+    top: 36px;
+    left: 12px;
+
+    @media (min-width: $tablet) {
+      width: 268px;
+      height: 112px;
+      top: 134px;
+      left: 411px;
+    }
+
+    @media (min-width: $desktop) {
+      width: 134px;
+      height: 56px;
+      top: 67px;
+      left: 33px;
+    }
   }
 }

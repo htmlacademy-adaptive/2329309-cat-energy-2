@@ -1,4 +1,28 @@
+.navigation {
+  position: relative;
+
+  @media (min-width: $tablet) {
+    align-self: flex-end;
+  }
+
+  @media (min-width: $tablet) {
+    justify-self: end;
+  }
+}
+
 .navigation__toggle {
+  position: absolute;
+  background-image: url("../../icons/stack.svg#menu-close");
+  background-repeat: no-repeat;
+  background-color: transparent;
+  border: none;
+  width: 18px;
+  height: 18px;
+  cursor: pointer;
+  top: -42px;
+  right: 0;
+  display: none;
+
   @media (min-width: $tablet) {
     display: none;
   }

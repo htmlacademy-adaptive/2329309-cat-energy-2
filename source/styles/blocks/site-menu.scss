@@ -3,13 +3,67 @@
   font-size: 20px;
   line-height: 20px;
   list-style-type: none;
+  padding: 0;
+  margin: 0;
+
+  &::after {
+    content: "";
+    position: absolute;
+    width: 320px;
+    height: 1px;
+    background-color: #ebebeb;
+    top: 0;
+    left: -20px;
+
+    @media (min-width: $tablet) {
+      content: none;
+    }
+  }
 
   @media (min-width: $tablet) {
-    min-width: 436px;
+    max-width: 437px;
+    display: flex;
+    flex-flow: row wrap;
+    padding-bottom: 2px;
+    margin-right: 2px;
   }
 
   @media (min-width: $desktop) {
-    min-width: 475px;
+    margin-left: 0;
+  }
+
+  @media (min-width: $desktop) {
+    max-width: 480px;
+  }
+}
+
+.site-menu__item {
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    width: 320px;
+    height: 1px;
+    background-color: #ebebeb;
+    bottom: 0;
+    left: -20px;
+
+    @media (min-width: $tablet) {
+      content: none;
+    }
+  }
+}
+
+.site-menu__item:first-child .site-menu__link {
+  @media (min-width: $tablet) {
+    padding-left: 0;
+  }
+}
+
+.site-menu__item:last-child .site-menu__link {
+  @media (min-width: $tablet) {
+    padding-right: 0;
   }
 }
 
@@ -17,4 +71,63 @@
   color: $secondary-color-text;
   text-decoration: none;
   text-transform: uppercase;
+  text-align: center;
+  display: block;
+  padding: 23px 5px 24px;
+
+  @media (min-width: $tablet) {
+    line-height: 24px;
+    font-size: 18px;
+    padding: 13 17px 0;
+    box-sizing: border-box;
+
+    &::after {
+      content: "";
+      height: 2px;
+      width: 100%;
+      background: transparent;
+      margin-top: 10px;
+      display: block;
+    }
+
+    &:hover {
+      opacity: 0.6;
+    }
+
+    &:active {
+      opacity: 0.3;
+    }
+  }
+
+  @media (min-width: $desktop) {
+    line-height: 29px;
+    font-size: 20px;
+  }
+}
+
+.site-menu__link--active {
+  @media (min-width: $tablet) {
+    &::after {
+      content: "";
+      height: 2px;
+      width: 100%;
+      background: $bg-basik-green;
+      margin-top: 8px;
+      display: block;
+    }
+  }
+}
+
+.site-menu__link--light {
+  @media (min-width: $desktop) {
+    color: #ffffff;
+  }
+}
+
+.site-menu__link--light.site-menu__link--active {
+  &::after {
+    @media (min-width: $desktop) {
+      background-color: #ffffff;
+    }
+  }
 }

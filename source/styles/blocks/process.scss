@@ -1,62 +1,226 @@
+.process {
+  margin-bottom: 54px;
+
+  @media (min-width: $tablet) {
+    padding-top: 16px;
+    border-bottom: 1px solid #e6e6e6;
+    margin-bottom: 45px;
+  }
+
+  @media (min-width: $desktop) {
+    padding: 0;
+    border-bottom: none;
+    margin-bottom: 42px;
+  }
+}
+
+.process__wrapper {
+  width: 280px;
+  margin: 0 auto;
+  margin-bottom: 29px;
+
+  @media (min-width: $tablet) {
+    width: 708px;
+    margin-bottom: 20px;
+  }
+
+  @media (min-width: $desktop) {
+    width: 1220px;
+    margin-bottom: 0;
+  }
+}
+
 .process__title {
   font-family: $secondary-font;
   color: $secondary-color-text;
   font-size: 36px;
   line-height: 40px;
   font-weight: 400;
+  margin: 0;
+  margin-bottom: 41px;
+
+  @media (min-width: $tablet) {
+    font-size: 60px;
+    line-height: 60px;
+    margin-bottom: 32px;
+  }
 }
 
 .process__list {
   list-style-type: none;
+  margin: 0;
+  padding: 0;
 
   @media (min-width: $tablet) {
     display: grid;
     grid-template-columns: 247px 249px;
-    gap: 37px 137px;
+    gap: 11px 137px;
   }
 
   @media (min-width: $desktop) {
-    grid-template-columns: 230px 246px 248px 250px;
+    grid-template-columns: 244px 245px 245px 250px;
     gap: 80px;
+  }
+}
+
+.process__item {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  margin-bottom: 26px;
+  padding-left: 80px;
+  text-align: left;
+
+  &::before {
+    content: "";
+    position: absolute;
+    display: inline-block;
+    z-index: 1;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    background-color: $bg-basik-green;
+    top: -2px;
+    left: 0;
+  }
+
+  @media (min-width: $tablet) {
+    padding: 151px 0 57px;
+
+    &::after {
+      width: 80px;
+      height: 80px;
+      background-color: $bg-basik-green;
+      top: 40px;
+      left: 0;
+    }
+  }
+}
+
+.process__item br {
+  display: none;
+
+  @media (min-width: $tablet) {
+    display: inline;
+  }
+}
+
+.process__text {
+  margin: 0;
+  position: relative;
+
+  @media (min-width: $tablet) {
+    &::after {
+      position: absolute;
+      width: 112px;
+      height: 280px;
+      font-family: $secondary-font;
+      font-size: 280px;
+      line-height: 280px;
+      text-align: center;
+      color: #f2f2f2;
+      top: -151px;
+      z-index: -1;
+    }
   }
 }
 
 .process__item--leaf {
   &::before {
-    content: "";
     background-image: url("../../icons/stack.svg#icon-leaf");
     height: 32px;
     width: 30px;
-    display: inline-block;
+    top: 13px;
+    left: 15px;
+
+    @media (min-width: $tablet) {
+      top: 65px;
+      left: 24px;
+    }
   }
 }
 
 .process__item--powder {
   &::before {
-    content: "";
     background-image: url("../../icons/stack.svg#icon-powder");
     height: 28px;
     width: 26px;
-    display: inline-block;
+    top: 15px;
+    left: 18px;
+
+    @media (min-width: $tablet) {
+      top: 67px;
+      left: 27px;
+    }
   }
 }
 
 .process__item--eat {
   &::before {
-    content: "";
     background-image: url("../../icons/stack.svg#icon-eat");
     height: 30px;
     width: 25px;
-    display: inline-block;
+    top: 13px;
+    left: 18px;
+
+    @media (min-width: $tablet) {
+      top: 65px;
+      left: 28px;
+    }
   }
 }
 
 .process__item--clock {
   &::before {
-    content: "";
     background-image: url("../../icons/stack.svg#icon-clock");
     height: 31px;
     width: 26px;
-    display: inline-block;
+    top: 13px;
+    left: 17px;
+
+    @media (min-width: $tablet) {
+      top: 64px;
+      left: 27px;
+    }
+  }
+}
+
+.process__text--one {
+  @media (min-width: $tablet) {
+    &::after {
+      content: "1";
+      right: 19px;
+    }
+  }
+}
+
+.process__text--two {
+  @media (min-width: $tablet) {
+    &::after {
+      content: "2";
+      right: 25px;
+    }
+  }
+}
+
+.process__text--three {
+  @media (min-width: $tablet) {
+    &::after {
+      content: "3";
+      right: 22px;
+    }
+  }
+}
+
+.process__text--four {
+  @media (min-width: $tablet) {
+    &::after {
+      content: "4";
+      right: 23px;
+    }
   }
 }

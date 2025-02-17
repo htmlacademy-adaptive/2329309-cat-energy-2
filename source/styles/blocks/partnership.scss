@@ -1,6 +1,35 @@
 .partnership {
-  display: flex;
-  justify-content: space-between;
+  @media (min-width: $desktop) {
+    position: relative;
+  }
+}
+
+.partnership__wrapper {
+  display: grid;
+  grid-template-columns: 140px 140px;
+  width: 280px;
+  margin: 0 auto;
+  padding: 26px 0;
+
+  @media (min-width: $tablet) {
+    width: 628px;
+    grid-template-columns: 235px 190px;
+    column-gap: 203px;
+    padding: 61px 0;
+  }
+
+  @media (min-width: $desktop) {
+    position: absolute;
+    width: 565px;
+    background-color: #ffffff;
+    grid-template-columns: 180px 157px;
+    column-gap: 70px;
+    padding: 60px 78px 60px 80px;
+    top: 96px;
+    left: 110px;
+    right: 764px;
+    box-sizing: border-box;
+  }
 }
 
 .partnership__title {
@@ -9,9 +38,53 @@
   font-size: 16px;
   line-height: 20px;
   font-weight: 400;
+  text-transform: uppercase;
+  margin: 0;
+
+  @media (min-width: $tablet) {
+    font-size: 20px;
+    line-height: 26px;
+  }
 }
 
 .partnership__adress {
   line-height: 20px;
   font-style: normal;
+  margin: 0;
+  padding: 0;
+
+  @media (min-width: $tablet) {
+    text-align: end;
+  }
+
+  @media (min-width: $desktop) {
+    text-align: start;
+  }
+}
+
+.partnership__adress-line {
+  margin: 0;
+
+  @media (min-width: $tablet) {
+    margin-bottom: 19px;
+  }
+}
+
+.partnership__city {
+  margin: 0;
+}
+
+.partnership__map {
+  width: 100%;
+  height: 362px;
+  border: none;
+  display: block;
+
+  @media (min-width: $tablet) {
+    height: 400px;
+  }
+}
+
+.partnership--color-background {
+  background-color: #f2f2f2;
 }

@@ -1,6 +1,55 @@
 .header {
+  width: 280px;
+  margin: 0 auto;
+  background-image: url("../../images/logo-name.svg");
+  background-size: 101px 18px;
+  background-repeat: no-repeat;
+  background-position: center 26px;
+
   @media (min-width: $tablet) {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
+    width: 704px;
+    margin: 25px auto 65px;
+    background: none;
+  }
+
+  @media (min-width: $desktop) {
+    width: 1220px;
+    margin: 55px auto 110px;
+    background: none;
+    position: relative;
+    z-index: 3;
+    display: grid;
+    grid-template-columns: max-content 50%;
+  }
+}
+
+.header__logo {
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
+
+  @media (min-width: $tablet) {
+    line-height: 0;
+    margin-left: -2px;
+  }
+
+  @media (min-width: $desktop) {
+    margin-left: 0;
+  }
+}
+
+.header__logo-image {
+  margin-top: 13px;
+  margin-bottom: 10px;
+
+  @media (min-width: $tablet) {
+    margin: 0;
   }
 }
