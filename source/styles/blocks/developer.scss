@@ -1,0 +1,52 @@
+.developer {
+  padding: 27px 0;
+
+  @media (min-width: $tablet) {
+    padding: 0;
+    padding-top: 6px;
+    width: 168px;
+  }
+}
+
+.developer__link {
+  position: relative;
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 400;
+  text-decoration: none;
+  color: $base-color-text;
+
+  &::after {
+    content: "";
+    position: absolute;
+    mask-image: url("../../icons/stack.svg#logo-html-academy");
+    background-color: #666666;
+    height: 34px;
+    width: 27px;
+    display: inline-block;
+    top: -7px;
+    right: -168px;
+  }
+
+  &:hover {
+    &::after {
+      background-color: $bg-basik-green;
+    }
+  }
+
+  &:active {
+    opacity: 0.3;
+
+    &::after {
+      background-color: $bg-basik-green;
+    }
+  }
+
+  @media (min-width: $tablet) {
+    padding-right: 50px;
+
+    &::after {
+      right: -1px;
+    }
+  }
+}

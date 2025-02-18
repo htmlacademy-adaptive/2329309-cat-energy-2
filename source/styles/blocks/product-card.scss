@@ -1,0 +1,144 @@
+.product-card {
+  display: grid;
+  position: relative;
+  grid-template-columns: 140px 140px;
+  padding: 20px 0 25px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    min-width: 320px;
+    height: 1px;
+    background-color: #ebebeb;
+    top: -2px;
+    left: -20px;
+  }
+
+  @media (min-width: $tablet) {
+    display: block;
+    padding: 161px 37px 40px;
+    background-color: #f2f2f2;
+
+    &::before {
+      content: none;
+    }
+  }
+
+  @media (min-width: $desktop) {
+    padding: 151px 38px 40px;
+  }
+}
+
+.product-card__link {
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
+
+  @media (min-width: $tablet) {
+    top: -71px;
+    left: 62px;
+    display: block;
+    position: absolute;
+  }
+
+  @media (min-width: $desktop) {
+    left: 38px;
+  }
+}
+
+.product-card__image {
+  @media (min-width: $tablet) {
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 22px;
+  }
+}
+
+.product-card__title-link {
+  text-decoration: none;
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
+
+  @media (min-width: $tablet) {
+    display: block;
+    width: 135px;
+    margin: 0 auto;
+  }
+}
+
+
+.product-card__title {
+  font-family: $secondary-font;
+  color: #222222;
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 400;
+  text-transform: uppercase;
+  width: 76px;
+  margin: 0;
+
+  @media (min-width: $tablet) {
+    font-size: 20px;
+    line-height: 24px;
+    width: 135px;
+    text-align: center;
+    margin-bottom: 13px;
+  }
+
+  @media (min-width: $desktop) {
+    margin-bottom: 17px;
+    width: 131px;
+  }
+}
+
+.product-card__list {
+  @media (min-width: $tablet) {
+    padding: 0;
+    margin: 0;
+    margin-bottom: 32px;
+  }
+
+  @media (min-width: $desktop) {
+    margin-bottom: 35px;
+  }
+}
+
+.product-card__item {
+  display: grid;
+  grid-template-columns: 59px 81px;
+  font-size: 12px;
+  line-height: 16px;
+  font-weight: 400;
+
+  @media (min-width: $tablet) {
+    grid-template-columns: 125px 125px;
+    font-size: 16px;
+    line-height: 20px;
+    padding: 7px 0 4px;
+    border-bottom: 1px solid #cdcdcd;
+  }
+
+  @media (min-width: $desktop) {
+    grid-template-columns: 75px 94px;
+    padding: 6px 0;
+  }
+}
+
+.product-card__value {
+  justify-self: end;
+}
+
+.product-card__button {
+  grid-column: 1 / -1;
+  margin-top: 8px;
+}

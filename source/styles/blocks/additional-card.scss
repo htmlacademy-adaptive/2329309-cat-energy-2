@@ -1,0 +1,104 @@
+.additional-card {
+  display: grid;
+  position: relative;
+  grid-template-columns: 140px 140px;
+  margin-bottom: 16px;
+  box-sizing: border-box;
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 280px;
+    height: 1px;
+    background-color: #ebebeb;
+    top: 2px;
+    left: 0;
+  }
+
+  @media (min-width: $tablet) {
+    grid-template-columns: 350px 188px 93px;
+    padding: 26px 38px 27px;
+    border-bottom: 1px solid #cdcdcd;
+    margin: 0;
+
+    &::before {
+      display: none;
+    }
+
+    &:last-child {
+      border-bottom: none;
+    }
+  }
+
+  @media (min-width: $desktop) {
+    grid-template-columns: 325px 243px 82px 244px;
+    padding: 24px 0 1px;
+    border-bottom: 1px solid #cdcdcd;
+
+    &:last-child {
+      border-bottom: 1px solid #cdcdcd;
+    }
+  }
+}
+
+.additional-card__title {
+  font-family: $secondary-font;
+  color: #222222;
+  font-size: 16px;
+  line-height: 16px;
+  font-weight: 400;
+  text-transform: uppercase;
+  margin-bottom: 13px;
+  grid-column: 1 / -1;
+
+  @media (min-width: $tablet) {
+    grid-column: 1 / 2;
+    font-size: 20px;
+    line-height: 20px;
+    margin-top: 0;
+    margin-bottom: 25px;
+  }
+}
+
+.additional-card__quantity {
+  line-height: 14px;
+  margin: 0;
+  margin-bottom: 15px;
+
+  @media (min-width: $tablet) {
+    place-self: end end;
+    margin-bottom: 21px;
+    line-height: 20px;
+  }
+
+  @media (min-width: $desktop) {
+    justify-self: start;
+  }
+}
+
+.additional-card__price {
+  line-height: 14px;
+  margin: 0;
+  justify-self: end;
+
+  @media (min-width: $tablet) {
+    align-self: end;
+    line-height: 20px;
+    margin-bottom: 23px;
+    margin-right: 4px;
+  }
+
+  @media (min-width: $desktop) {
+    justify-self: start;
+  }
+}
+
+.additional-card__button {
+  grid-column: 1 / -1;
+
+  @media (min-width: $desktop) {
+    grid-column: 4 / 5;
+    margin-top: -10px;
+    margin-bottom: 15px;
+  }
+}
