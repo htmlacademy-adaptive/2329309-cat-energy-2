@@ -30,11 +30,14 @@
 
   &:focus {
     outline: 2px solid $base-color-text;
+    border: none;
   }
 
-  &:invalid {
+  &:invalid:not(:placeholder-shown) {
     outline: 2px solid #ff8282;
+    border: none;
   }
+
 
   @media (min-width: $tablet) {
     width: 376px;
