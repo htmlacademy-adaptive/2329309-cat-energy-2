@@ -7,17 +7,18 @@
   &::before {
     content: "";
     position: absolute;
-    min-width: 320px;
-    height: 1px;
-    background-color: #ebebeb;
     top: -2px;
-    left: -20px;
+    right: 0;
+    background-color: #ebebeb;
+    width: 100vw;
+    height: 1px;
+    box-shadow: 100vw 0 0 0 #ebebeb;
   }
 
   @media (min-width: $tablet) {
     display: block;
-    padding: 161px 37px 40px;
-    background-color: #f2f2f2;
+    padding: 10px 37px 40px;
+    background-image: linear-gradient(to bottom, #ffffff 80px, #f2f2f2 80px);
 
     &::before {
       content: none;
@@ -25,7 +26,7 @@
   }
 
   @media (min-width: $desktop) {
-    padding: 151px 38px 40px;
+    padding: 10px 38px 40px;
   }
 }
 
@@ -39,10 +40,7 @@
   }
 
   @media (min-width: $tablet) {
-    top: -71px;
-    left: 62px;
     display: block;
-    position: absolute;
   }
 
   @media (min-width: $desktop) {
@@ -55,6 +53,10 @@
     display: block;
     margin: 0 auto;
     margin-bottom: 22px;
+  }
+
+  @media (min-width: $desktop) {
+    margin-bottom: 12px;
   }
 }
 

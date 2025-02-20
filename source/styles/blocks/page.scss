@@ -1,0 +1,15 @@
+.page__body--background {
+  @media (min-width: $desktop) {
+    position: relative;
+
+    &::after {
+      content: "";
+      background-color: #64a63b;
+      position: absolute;
+      width: 50%;
+      height: 600px;
+      right: 0;
+      top: -150px;
+    }
+  }
+}

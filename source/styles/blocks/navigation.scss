@@ -1,29 +1,134 @@
 .navigation {
-  position: relative;
+  @media (min-width: $tablet) {
+    display: grid;
+    grid-template-columns: 174px 1fr;
+    justify-content: space-between;
+    width: 704px;
+    margin: 25px auto 59px;
+  }
+
+  @media (min-width: $desktop) {
+    width: 1220px;
+    margin: 0 auto 104px;
+    padding-top: 55px;
+    background: none;
+    z-index: 3;
+    display: grid;
+    grid-template-columns: 202px 550px;
+    column-gap: 468px;
+  }
+}
+
+.navigation__wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: 280px;
+  margin: 0 auto;
+  padding: 13px 0 11px;
 
   @media (min-width: $tablet) {
-    align-self: flex-end;
+    display: block;
+    padding: 0;
+  }
+
+  @media (min-width: $desktop) {
+    display: block;
+    padding: 0;
+  }
+}
+
+.navigation__logo {
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.6;
   }
 
   @media (min-width: $tablet) {
-    justify-self: end;
+    line-height: 0;
+    margin-left: -2px;
+  }
+
+  @media (min-width: $desktop) {
+    margin-left: 0;
   }
 }
 
 .navigation__toggle {
-  position: absolute;
+  justify-self: end;
   background-image: url("../../icons/stack.svg#menu-close");
   background-repeat: no-repeat;
   background-color: transparent;
   border: none;
-  width: 18px;
-  height: 18px;
+  width: 20px;
+  height: 20px;
   cursor: pointer;
-  top: -42px;
-  right: 0;
+  margin-top: 8px;
   display: none;
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 
   @media (min-width: $tablet) {
     display: none;
+  }
+}
+
+.navigation--opened .navigation__toggle {
+  display: block;
+
+  @media (min-width: $tablet) {
+    display: none;
+  }
+}
+
+.navigation--opened .navigation__list {
+  position: absolute;
+  right: 0;
+  left: 0;
+  z-index: 4;
+  display: block;
+  background-color: #ffffff;
+
+  @media (min-width: $tablet) {
+    display: flex;
+    position: relative;
+    background-color: transparent;
+  }
+}
+
+.navigation--closed .navigation__toggle {
+  display: block;
+  background-image: url("../../icons/stack.svg#menu");
+  width: 26px;
+  height: 24px;
+  margin-top: 7px;
+
+  @media (min-width: $tablet) {
+    display: none;
+  }
+}
+
+.navigation--closed .navigation__list {
+  display: none;
+
+  @media (min-width: $tablet) {
+    display: flex;
+    z-index: 5;
+  }
+}
+
+.navigation--border.navigation--closed {
+  border-bottom: 1px solid #d9d9d9;
+
+  @media (min-width: $tablet) {
+    border: none;
   }
 }

@@ -1,57 +1,35 @@
 .site-menu {
+  position: relative;
   font-family: $secondary-font;
   font-size: 20px;
   line-height: 20px;
   list-style-type: none;
   padding: 0;
   margin: 0;
-
-  &::after {
-    content: "";
-    position: absolute;
-    width: 320px;
-    height: 1px;
-    background-color: #ebebeb;
-    top: 0;
-    left: -20px;
-
-    @media (min-width: $tablet) {
-      content: none;
-    }
-  }
+  border-top: 1px solid #e6e6e6;
 
   @media (min-width: $tablet) {
+    place-self: center end;
     max-width: 437px;
     display: flex;
     flex-flow: row wrap;
     padding-bottom: 2px;
     margin-right: 2px;
-  }
-
-  @media (min-width: $desktop) {
-    margin-left: 0;
+    border: none;
   }
 
   @media (min-width: $desktop) {
     max-width: 480px;
+    margin-left: 0;
+    z-index: 4;
   }
 }
 
 .site-menu__item {
-  position: relative;
+  border-bottom: 1px solid #e6e6e6;
 
-  &::after {
-    content: "";
-    position: absolute;
-    width: 320px;
-    height: 1px;
-    background-color: #ebebeb;
-    bottom: 0;
-    left: -20px;
-
-    @media (min-width: $tablet) {
-      content: none;
-    }
+  @media (min-width: $tablet) {
+    border: none;
   }
 }
 
@@ -73,7 +51,17 @@
   text-transform: uppercase;
   text-align: center;
   display: block;
-  padding: 23px 5px 24px;
+  padding: 21px 5px 24px;
+  max-width: 280px;
+  margin: 0 auto;
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 
   @media (min-width: $tablet) {
     line-height: 24px;
@@ -88,14 +76,6 @@
       background: transparent;
       margin-top: 10px;
       display: block;
-    }
-
-    &:hover {
-      opacity: 0.6;
-    }
-
-    &:active {
-      opacity: 0.3;
     }
   }
 
@@ -112,7 +92,7 @@
       height: 2px;
       width: 100%;
       background: $bg-basik-green;
-      margin-top: 8px;
+      margin-top: 7px;
       display: block;
     }
   }

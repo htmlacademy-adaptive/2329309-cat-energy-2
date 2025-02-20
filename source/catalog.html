@@ -10,23 +10,27 @@
   <link rel="apple-touch-icon" href="favicons/apple.png">
   <link rel="manifest" href="manifest.webmanifest">
   <link rel="stylesheet" href="styles/styles.css">
+  <link rel="preload" href="fonts/oswald/oswaldregular.woff2" type="font/woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/lato/Lato-Regular.woff2" type="font/woff2" as="font" crossorigin="anonymous">
   <script src="scripts/index.js" defer></script>
 </head>
 
 <body class="page__body">
   <header class="header">
-    <a class="header__logo" href="index.html">
-      <picture>
-        <source media="(min-width: 1440px)" width="202" height="59" srcset="images/logo-desktop.svg" type="image/svg+xml">
-        <source media="(min-width: 768px)" width="174" height="50" srcset="images/logo-tablet.svg" type="image/svg+xml">
-        <img class="header__logo-image" width="33" height="38" src="images/logo-mobile.svg" alt="Логотип Cat Energy">
-      </picture>
-    </a>
-    <nav class="navigation">
-      <button class="navigation__toggle" type="button">
-        <span class="visually-hidden">Открыть меню</span>
-      </button>
-      <ul class="navigation__list site-menu site-menu--close">
+    <nav class="navigation navigation--border">
+      <div class="navigation__wrapper">
+        <a class="navigation__logo" href="index.html">
+          <picture>
+            <source media="(min-width: 1440px)" width="202" height="59" srcset="images/logo-desktop.svg" type="image/svg+xml">
+            <source media="(min-width: 768px)" width="174" height="50" srcset="images/logo-tablet.svg" type="image/svg+xml">
+            <img class="navigation__logo-image" width="33" height="38" src="images/logo-mobile.svg" alt="Логотип Cat Energy">
+          </picture>
+        </a>
+        <button class="navigation__toggle" type="button">
+          <span class="visually-hidden">Открыть/закрыть меню</span>
+        </button>
+      </div>
+      <ul class="navigation__list site-menu">
         <li class="site-menu__item">
           <a class="site-menu__link" href="index.html">Главная</a>
         </li>
@@ -41,13 +45,17 @@
   </header>
 
   <main class="main">
-    <section class="catalog">
+    <section class="catalog" data-test="catalog">
       <div class="catalog__wrapper">
         <h1 class="catalog__title">Каталог продукции</h1>
         <ul class="catalog__list">
           <li class="catalog__item product-card">
             <a class="product-card__link" href="#">
               <picture>
+                <source media="(min-width: 1440px)" width="169" height="210" srcset="images/chicken-500-desktop@1x.webp 1x, images/chicken-500-desktop@2x.webp 2x" type="image/webp">
+                <source media="(min-width: 768px)" width="200" height="210" srcset="images/chicken-500-tablet@1x.webp 1x, images/chicken-500-tablet@2x.webp 2x" type="image/webp">
+                <source width="140" height="107" srcset="images/chicken-500-mobile@1x.webp 1x, images/chicken-500-mobile@2x.webp 2x" type="image/webp">
+
                 <source media="(min-width: 1440px)" width="169" height="210" srcset="images/chicken-500-desktop@1x.png 1x, images/chicken-500-desktop@2x.png 2x" type="image/png">
                 <source media="(min-width: 768px)" width="200" height="210" srcset="images/chicken-500-tablet@1x.png 1x, images/chicken-500-tablet@2x.png 2x" type="image/png">
                 <img class="product-card__image" width="140" height="107" src="images/chicken-500-mobile@1x.png" srcset="images/chicken-500-mobile@2x.png 2x" alt="Банка корма со вкусом курицы 500 грамм">
@@ -77,6 +85,10 @@
           <li class="catalog__item product-card">
             <a class="product-card__link" href="#">
               <picture>
+                <source media="(min-width: 1440px)" width="169" height="210" srcset="images/chicken-1000-desktop@1x.webp 1x, images/chicken-1000-desktop@2x.webp 2x" type="image/webp">
+                <source media="(min-width: 768px)" width="200" height="210" srcset="images/chicken-1000-tablet@1x.webp 1x, images/chicken-1000-tablet@2x.webp 2x" type="image/webp">
+                <source width="140" height="107" srcset="images/chicken-1000-mobile@1x.webp 1x, images/chicken-1000-mobile@2x.webp 2x" type="image/webp">
+
                 <source media="(min-width: 1440px)" width="169" height="210" srcset="images/chicken-1000-desktop@1x.png 1x, images/chicken-1000-desktop@2x.png 2x" type="image/png">
                 <source media="(min-width: 768px)" width="200" height="210" srcset="images/chicken-1000-tablet@1x.png 1x, images/chicken-1000-tablet@2x.png 2x" type="image/png">
                 <img class="product-card__image" width="140" height="107" src="images/chicken-1000-mobile@1x.png" srcset="images/chicken-1000-mobile@2x.png 2x" alt="Банка корма со вкусом курицы 1000 грамм">
@@ -106,6 +118,10 @@
           <li class="catalog__item product-card">
             <a class="product-card__link" href="#">
               <picture>
+                <source media="(min-width: 1440px)" width="169" height="210" srcset="images/fish-500-desktop@1x.webp 1x, images/fish-500-desktop@2x.webp 2x" type="image/webp">
+                <source media="(min-width: 768px)" width="200" height="210" srcset="images/fish-500-tablet@1x.webp 1x, images/fish-500-tablet@2x.webp 2x" type="image/webp">
+                <source width="140" height="107" srcset="images/fish-500-mobile@1x.webp 1x, images/fish-500-mobile@2x.webp 2x" type="image/webp">
+
                 <source media="(min-width: 1440px)" width="169" height="210" srcset="images/fish-500-desktop@1x.png 1x, images/fish-500-desktop@2x.png 2x" type="image/png">
                 <source media="(min-width: 768px)" width="200" height="210" srcset="images/fish-500-tablet@1x.png 1x, images/fish-500-tablet@2x.png 2x" type="image/png">
                 <img class="product-card__image" width="140" height="107" src="images/fish-500-mobile@1x.png" srcset="images/fish-500-mobile@2x.png 2x" alt="Банка корма со вкусом рыбы 500 грамм">
@@ -135,6 +151,10 @@
           <li class="catalog__item product-card">
             <a class="product-card__link" href="#">
               <picture>
+                <source media="(min-width: 1440px)" width="169" height="210" srcset="images/fish-1000-desktop@1x.webp 1x, images/fish-1000-desktop@2x.webp 2x" type="image/webp">
+                <source media="(min-width: 768px)" width="200" height="210" srcset="images/fish-1000-tablet@1x.webp 1x, images/fish-1000-tablet@2x.webp 2x" type="image/webp">
+                <source width="140" height="107" srcset="images/fish-1000-mobile@1x.webp 1x, images/fish-1000-mobile@2x.webp 2x" type="image/webp">
+
                 <source media="(min-width: 1440px)" width="169" height="210" srcset="images/fish-1000-desktop@1x.png 1x, images/fish-1000-desktop@2x.png 2x" type="image/png">
                 <source media="(min-width: 768px)" width="200" height="210" srcset="images/fish-1000-tablet@1x.png 1x, images/fish-1000-tablet@2x.png 2x" type="image/png">
                 <img class="product-card__image" width="140" height="107" src="images/fish-1000-mobile@1x.png" srcset="images/fish-1000-mobile@2x.png 2x" alt="Банка корма со вкусом рыбы 1000 грамм">
@@ -164,6 +184,10 @@
           <li class="catalog__item product-card">
             <a class="product-card__link" href="#">
               <picture>
+                <source media="(min-width: 1440px)" width="169" height="210" srcset="images/buckwheat-500-desktop@1x.webp 1x, images/buckwheat-500-desktop@2x.webp 2x" type="image/webp">
+                <source media="(min-width: 768px)" width="200" height="210" srcset="images/buckwheat-500-tablet@1x.webp 1x, images/buckwheat-500-tablet@2x.webp 2x" type="image/webp">
+                <source width="140" height="107" srcset="images/buckwheat-500-mobile@1x.webp 1x, images/buckwheat-500-mobile@2x.webp 2x" type="image/webp">
+
                 <source media="(min-width: 1440px)" width="169" height="210" srcset="images/buckwheat-500-desktop@1x.png 1x, images/buckwheat-500-desktop@2x.png 2x" type="image/png">
                 <source media="(min-width: 768px)" width="200" height="210" srcset="images/buckwheat-500-tablet@1x.png 1x, images/buckwheat-500-tablet@2x.png 2x" type="image/png">
                 <img class="product-card__image" width="140" height="107" src="images/buckwheat-500-mobile@1x.png" srcset="images/buckwheat-500-mobile@2x.png 2x" alt="Банка корма со вкусом гречки 500 грамм">
@@ -193,6 +217,10 @@
           <li class="catalog__item product-card">
             <a class="product-card__link" href="#">
               <picture>
+                <source media="(min-width: 1440px)" width="169" height="210" srcset="images/buckwheat-1000-desktop@1x.webp 1x, images/buckwheat-1000-desktop@2x.webp 2x" type="image/webp">
+                <source media="(min-width: 768px)" width="200" height="210" srcset="images/buckwheat-1000-tablet@1x.webp 1x, images/buckwheat-1000-tablet@2x.webp 2x" type="image/webp">
+                <source width="140" height="107" srcset="images/buckwheat-1000-mobile@1x.webp 1x, images/buckwheat-1000-mobile@2x.webp 2x" type="image/webp">
+
                 <source media="(min-width: 1440px)" width="169" height="210" srcset="images/buckwheat-1000-desktop@1x.png 1x, images/buckwheat-1000-desktop@2x.png 2x" type="image/png">
                 <source media="(min-width: 768px)" width="200" height="210" srcset="images/buckwheat-1000-tablet@1x.png 1x, images/buckwheat-1000-tablet@2x.png 2x" type="image/png">
                 <img class="product-card__image" width="140" height="107" src="images/buckwheat-1000-mobile@1x.png" srcset="images/buckwheat-1000-mobile@2x.png 2x" alt="Банка корма со вкусом гречки 1000 грамм">
@@ -222,6 +250,10 @@
           <li class="catalog__item product-card">
             <a class="product-card__link" href="#">
               <picture>
+                <source media="(min-width: 1440px)" width="169" height="210" srcset="images/rice-500-desktop@1x.webp 1x, images/rice-500-desktop@2x.webp 2x" type="image/webp">
+                <source media="(min-width: 768px)" width="200" height="210" srcset="images/rice-500-tablet@1x.webp 1x, images/rice-500-tablet@2x.webp 2x" type="image/webp">
+                <source width="140" height="107" srcset="images/rice-500-mobile@1x.webp 1x, images/rice-500-mobile@2x.webp 2x" type="image/webp">
+
                 <source media="(min-width: 1440px)" width="169" height="210" srcset="images/rice-500-desktop@1x.png 1x, images/rice-500-desktop@2x.png 2x" type="image/png">
                 <source media="(min-width: 768px)" width="200" height="210" srcset="images/rice-500-tablet@1x.png 1x, images/rice-500-tablet@2x.png 2x" type="image/png">
                 <img class="product-card__image" width="140" height="107" src="images/rice-500-mobile@1x.png" srcset="images/rice-500-mobile@2x.png 2x" alt="Банка корма со вкусом риса 500 грамм">
@@ -256,7 +288,7 @@
         </ul>
       </div>
     </section>
-    <section class="catalog-additional">
+    <section class="catalog-additional" data-test="additional">
       <div class="catalog-additional__wrapper">
         <h2 class="catalog-additional__title">Дополнительные товары</h2>
         <div class="catalog-additional__inner-wrapper">
@@ -286,9 +318,9 @@
               <a class="additional-card__button button" href="#">Заказать</a>
             </li>
           </ul>
-          <div class="catalog-additional__promo promo">
+          <a class="catalog-additional__promo promo" href="#">
             <p class="promo__text">Закажите все <br> и получите чехол для кота в подарок!</p>
-          </div>
+          </a>
         </div>
       </div>
     </section>
@@ -300,7 +332,7 @@
           <label class="subscribe-form__label" for="subscribe-input">
             <span class="visually-hidden">Введите ваш e-mail</span>
           </label>
-          <input class="subscribe-form__input" type="email" name="email" placeholder="кuklachev@gmail.com" id="subscribe-input">
+          <input class="subscribe-form__input" type="email" name="email" placeholder="кuklachev@gmail.com" id="subscribe-input" required>
           <button class="subscribe-form__button button" type="submit">Подписаться</button>
         </form>
       </div>
@@ -313,7 +345,9 @@
           <p class="partnership__city">Санкт-Петербург</p>
         </address>
       </div>
-      <iframe class="partnership__map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6036257197802!2d30.320472476714233!3d59.938719162094195!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1739368281054!5m2!1sru!2sru" allowfullscreen title="Офис компании по адресу ул. Большая Конюшенная, д. 19/8 Санкт-Петербургг"></iframe>
+      <div class="partnership__map">
+        <iframe class="partnership__map-iframe" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6036257197802!2d30.320472476714233!3d59.938719162094195!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1739368281054!5m2!1sru!2sru" allowfullscreen title="Офис компании по адресу ул. Большая Конюшенная, д. 19/8 Санкт-Петербургг"></iframe>
+      </div>
     </section>
   </main>
 

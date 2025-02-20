@@ -1,7 +1,11 @@
 .catalog {
   @media (min-width: $tablet) {
     margin-bottom: 48px;
-    margin-top: -1px;
+  }
+
+  @media (min-width: $desktop) {
+    margin-bottom: 48px;
+    margin-top: -35px;
   }
 }
 
@@ -32,7 +36,7 @@
   @media (min-width: $tablet) {
     font-size: 60px;
     line-height: 60px;
-    margin-bottom: 165px;
+    margin-bottom: 84px;
   }
 }
 
@@ -44,11 +48,11 @@
   @media (min-width: $tablet) {
     display: grid;
     grid-template-columns: 324px 324px;
-    gap: 141px 60px;
+    gap: 60px 60px;
   }
 
   @media (min-width: $desktop) {
     grid-template-columns: 245px 245px 245px 245px;
-    gap: 144px 80px;
+    gap: 63px 80px;
   }
 }
