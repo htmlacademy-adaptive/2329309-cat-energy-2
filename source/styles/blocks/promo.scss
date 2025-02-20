@@ -79,6 +79,7 @@
   text-align: center;
   z-index: 5;
   position: relative;
+  margin: 0;
 
   &::before {
     content: "";
@@ -92,7 +93,6 @@
   }
 
   @media (min-width: $tablet) {
-    margin: 0;
     padding: 71px 125px 69px 421px;
     text-align: start;
 

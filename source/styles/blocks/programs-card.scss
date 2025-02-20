@@ -30,6 +30,8 @@
   @media (min-width: $desktop) {
     padding: 77px 61px 55px 52px;
     margin: 0;
+    display: flex;
+    flex-direction: column;
 
     &::before {
       width: 100px;
@@ -88,6 +90,8 @@
 
   @media (min-width: $desktop) {
     margin-bottom: 23px;
+    flex-grow: 1;
+    margin-top: 0;
   }
 }
 

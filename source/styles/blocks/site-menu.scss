@@ -10,7 +10,6 @@
 
   @media (min-width: $tablet) {
     place-self: center end;
-    max-width: 437px;
     display: flex;
     flex-flow: row wrap;
     padding-bottom: 2px;
@@ -19,7 +18,6 @@
   }
 
   @media (min-width: $desktop) {
-    max-width: 480px;
     margin-left: 0;
     z-index: 4;
   }
@@ -30,18 +28,6 @@
 
   @media (min-width: $tablet) {
     border: none;
-  }
-}
-
-.site-menu__item:first-child .site-menu__link {
-  @media (min-width: $tablet) {
-    padding-left: 0;
-  }
-}
-
-.site-menu__item:last-child .site-menu__link {
-  @media (min-width: $tablet) {
-    padding-right: 0;
   }
 }
 
@@ -66,7 +52,7 @@
   @media (min-width: $tablet) {
     line-height: 24px;
     font-size: 18px;
-    padding: 13 17px 0;
+    padding: 10px 17px 0;
     box-sizing: border-box;
 
     &::after {
