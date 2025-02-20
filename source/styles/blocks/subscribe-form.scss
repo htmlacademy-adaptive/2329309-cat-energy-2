@@ -24,7 +24,7 @@
     text-transform: uppercase;
   }
 
-  &:hover {
+  &:hover:not(:disabled) {
     border-color: #cdcdcd;
   }
 
@@ -36,6 +36,10 @@
   &:invalid:not(:placeholder-shown) {
     outline: 2px solid #ff8282;
     border: none;
+  }
+
+  &:disabled {
+    opacity: 0.3;
   }
 
 

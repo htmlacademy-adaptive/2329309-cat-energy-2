@@ -1,9 +1,9 @@
 .navigation {
   @media (min-width: $tablet) {
     display: grid;
-    grid-template-columns: 174px 1fr;
-    justify-content: space-between;
-    width: 704px;
+    grid-template-columns: 174px 473px;
+    column-gap: 76px;
+    width: 708px;
     margin: 25px auto 59px;
   }
 
@@ -14,8 +14,8 @@
     background: none;
     z-index: 3;
     display: grid;
-    grid-template-columns: 202px 550px;
-    column-gap: 468px;
+    grid-template-columns: 202px 518px;
+    column-gap: 518px;
   }
 }
 
@@ -48,7 +48,6 @@
 
   @media (min-width: $tablet) {
     line-height: 0;
-    margin-left: -2px;
   }
 
   @media (min-width: $desktop) {

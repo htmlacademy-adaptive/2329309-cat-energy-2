@@ -12,12 +12,16 @@
   box-sizing: border-box;
   border: none;
 
-  &:hover {
+  &:hover:not(:disabled) {
     background-color: #5eaa2f;
   }
 
-  &:active {
+  &:active:not(:disabled) {
     color: rgba(255, 255, 255, 0.3);
     background-color: #5eaa2f;
+  }
+
+  &:disabled {
+    opacity: 0.3;
   }
 }

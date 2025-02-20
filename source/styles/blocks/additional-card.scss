@@ -16,7 +16,7 @@
   }
 
   @media (min-width: $tablet) {
-    grid-template-columns: 350px 188px 93px;
+    grid-template-columns: 350px 186px 95px;
     padding: 26px 38px 27px;
     border-bottom: 1px solid #cdcdcd;
     margin: 0;
@@ -31,13 +31,39 @@
   }
 
   @media (min-width: $desktop) {
-    grid-template-columns: 325px 243px 82px 244px;
-    padding: 24px 0 1px;
+    grid-template-columns: 325px 243px 81px 244px;
+    padding: 25px 0 1px;
     border-bottom: 1px solid #cdcdcd;
 
     &:last-child {
       border-bottom: 1px solid #cdcdcd;
     }
+  }
+}
+
+.additional-card:nth-child(1) {
+  @media (min-width: $tablet) {
+    padding: 24px 38px 27px;
+  }
+
+  @media (min-width: $desktop) {
+    padding: 25px 0 1px;
+  }
+}
+
+.additional-card:nth-child(2) .additional-card__quantity {
+  @media (min-width: $desktop) {
+    margin-bottom: 23px;
+  }
+}
+
+.additional-card:nth-child(3) .additional-card__quantity {
+  @media (min-width: $tablet) {
+    margin-bottom: 23px;
+  }
+
+  @media (min-width: $desktop) {
+    margin-bottom: 24px;
   }
 }
 
